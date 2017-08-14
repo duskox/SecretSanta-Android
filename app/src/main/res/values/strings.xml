@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Secret Santa</string>
+    <string name="str_welcome_message">Welcome to Secret Santa!\nLogin or Register\nwith your
+        Futurice email.
+    </string>
+    <string name="str_register">Register</string>
+    <string name="str_login">Login</string>
+</resources>

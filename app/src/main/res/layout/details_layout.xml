@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="47dp"
+            tools:layout_editor_absoluteX="140dp" android:id="@+id/textView"
+            tools:text="Raffle starts on:" android:textStyle="bold"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="41dp" tools:layout_editor_absoluteY="92dp"
+            tools:layout_editor_absoluteX="71dp" android:id="@+id/textView2"
+            tools:text="01.12.2017. 12:00" android:textSize="30sp"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="187dp"
+            tools:layout_editor_absoluteX="156dp" android:id="@+id/textView3"
+            android:textStyle="bold" tools:text="Party is on:"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="235dp"
+            tools:layout_editor_absoluteX="71dp" android:id="@+id/textView4"
+            android:textSize="30sp" tools:text="25.12.2017. 19:00"/>
+    <android.support.constraint.Guideline android:layout_width="wrap_content"
+                                          android:layout_height="wrap_content"
+                                          android:id="@+id/guideline"
+                                          android:orientation="horizontal"
+                                          app:layout_constraintGuide_begin="92dp"/>
+    <android.support.constraint.Guideline android:layout_width="wrap_content"
+                                          android:layout_height="wrap_content"
+                                          android:id="@+id/guideline2"
+                                          app:layout_constraintGuide_begin="192dp"
+                                          android:orientation="vertical"/>
+    <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="360dp"
+            tools:layout_editor_absoluteX="133dp" android:id="@+id/button"
+            tools:text="Leave raffle"/>
+</android.support.constraint.ConstraintLayout>

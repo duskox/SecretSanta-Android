@@ -1,0 +1,82 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.0"
+    defaultConfig {
+        applicationId "com.futurice.dvor.secretsanta"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+ext {
+    dependencyVersions = [
+            kotlin                         : kotlin_version,
+            androidSupportConstraintLibrary: '1.0.2',
+            retrofit2                      : '2.3.0',
+            junit                          : '4.12',
+            androidSupportLibrary          : '26.0.1',
+            dagger2                        : '2.11',
+            retrofit2RxJava2Adapter        : '1.0.0',
+            retrofit2GsonConverter         : '2.0.0',
+
+//            rxJava2                        : '2.1.0',
+//            rxAndroid                      : '2.0.1',
+//            okHttp                         : '3.6.0',
+//            picasso                        : '2.5.2',
+//            gson                           : '2.8.1',
+//            autoValue                      : '1.4.1',
+//            autoValueGson                  : '0.4.6',
+//            autoValueParcelable            : '0.2.5',
+//            autoFactory                    : '1.0-beta5',
+//            options                        : '1.2.4',
+//            exoplayer                      : 'r2.1.1',
+//            butterknife                    : '8.6.0',
+//            firebase                       : '9.4.0',
+//            stetho                         : '1.4.2',
+//            chuck                          : '1.0.4',
+//            timber                         : '4.5.1',
+//            mockito                        : '2.2.2',
+//            assertJ                        : '1.7.1',
+//            moshi                          : '1.5.0',
+//            moshiConverter                 : '2.3.0'
+    ]
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$dependencyVersions.kotlin"
+    implementation "com.android.support:appcompat-v7:$dependencyVersions.androidSupportLibrary"
+    implementation "com.android.support.constraint:constraint-layout:$dependencyVersions.androidSupportConstraintLibrary"
+    testImplementation "junit:junit:$dependencyVersions.junit"
+    androidTestImplementation 'com.android.support.test:runner:1.0.0'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.0'
+
+    // RETROFIT, GSON
+    implementation "com.squareup.retrofit2:retrofit:$dependencyVersions.retrofit2"
+    implementation "com.squareup.retrofit2:converter-gson:$dependencyVersions.retrofit2GsonConverter"
+    implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$dependencyVersions.retrofit2RxJava2Adapter"
+    implementation "com.google.code.gson:gson:$dependencyVersions.gson"
+
+    // DAGGER2
+    implementation "com.google.dagger:dagger-android:$dependencyVersions.dagger2"
+    implementation "com.google.dagger:dagger-android-support:$dependencyVersions.dagger2" // if you use the support libraries
+    annotationProcessor "com.google.dagger:dagger-android-processor:$dependencyVersions.dagger2"
+
+}
